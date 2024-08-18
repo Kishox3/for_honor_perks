@@ -1,0 +1,210 @@
+{
+    "helm": [
+        {
+            "name": "Gyoukei",
+            "perks": {
+                "Vengeful Barrier": 290,
+                "Last Stand": 140
+            }
+        },
+        {
+            "name": "Chikai",
+            "perks": {
+                "Last Stand": 140,
+                "Fresh Focus": 140
+            }
+        },
+        {
+            "name": "Kagome",
+            "perks": {
+                "Bastion": 140,
+                "Vengeful Barrier": 290
+            }
+        },
+        {
+            "name": "Asase",
+            "perks": {
+                "Bastion": 290,
+                "Bulk Up": 140
+            }
+        },
+        {
+            "name": "Kisaragi",
+            "perks": {
+                "Last Stand": 145,
+                "Bulk Up": 145
+            }
+        },
+        {
+            "name": "Sanjuro",
+            "perks": {
+                "Shields Up": 280,
+                "Bastion": 130
+            }
+        }
+    ],
+    "chest": [
+        {
+            "name": "Gyoukei",
+            "perks": {
+                "Bastion": 140,
+                "Vengeful Barrier": 290
+            }
+        },
+        {
+            "name": "Debossed Dragon",
+            "perks": {
+                "Bastion": 140,
+                "Vengeful Barrier": 290
+            }
+        },
+        {
+            "name": "Monastic",
+            "perks": {
+                "Last Stand": 140,
+                "Bulk Up": 140
+            }
+        },
+        {
+            "name": "Elegant Barbs",
+            "perks": {
+                "Shields Up": 280,
+                "Vengeful Barrier": 130
+            }
+        }
+    ],
+    "arms": [
+        {
+            "name": "Endless Waves",
+            "perks": {
+                "Vengeful Barrier": 280,
+                "Last Stand": 130
+            }
+        },
+        {
+            "name": "Zokuzoku",
+            "perks": {
+                "Bastion": 290,
+                "Fresh Focus": 140
+            }
+        },
+        {
+            "name": "Stormwalker",
+            "perks": {
+                "Vengeful Barrier": 290,
+                "Bulk Up": 140
+            }
+        }
+    ],
+    "weapon1": [
+        {
+            "name": "Asagao",
+            "perks": {
+                "Bastion": 290,
+                "Last Stand": 140
+            }
+        },
+        {
+            "name": "Stripe and Scale",
+            "perks": {
+                "Bastion": 290,
+                "Fresh Focus": 140
+            }
+        },
+        {
+            "name": "Jurozaemon",
+            "perks": {
+                "Bastion": 290,
+                "Bulk Up": 140
+            }
+        },
+        {
+            "name": "Forgotten Keishoumoji",
+            "perks": {
+                "Bastion": 140,
+                "Vengeful Barrier": 290
+            }
+        },
+        {
+            "name": "Last Words",
+            "perks": {
+                "Last Stand": 145,
+                "Fresh Focus": 145
+            }
+        },
+        {
+            "name": "Bamboo",
+            "perks": {
+                "Last Stand": 145,
+                "Bulk Up": 145
+            }
+        }
+    ],
+    "weapon2": [
+        {
+            "name": "Asagao",
+            "perks": {
+                "Bastion": 290,
+                "Last Stand": 140
+            }
+        },
+        {
+            "name": "Guarded Gate",
+            "perks": {
+                "Last Stand": 145,
+                "Fresh Focus": 145
+            }
+        },
+        {
+            "name": "Edgelord",
+            "perks": {
+                "Aegis": 290,
+                "Bulk Up": 140
+            }
+        },
+        {
+            "name": "Edgelord",
+            "perks": {
+                "Vengeful Barrier": 290,
+                "Last Stand": 140
+            }
+        },
+        {
+            "name": "Stripe and Scale",
+            "perks": {
+                "Last Stand": 145,
+                "Fresh Focus": 145
+            }
+        },
+        {
+            "name": "Fisherman's Wife",
+            "perks": {
+                "Bastion": 290,
+                "Last Stand": 140
+            }
+        },
+        {
+            "name": "Wasaga",
+            "perks": {
+                "Bastion": 280,
+                "Last Stand": 130
+            }
+        }
+    ],
+    "weapon3": [
+        {
+            "name": "Asagao",
+            "perks": {
+                "Bastion": 280,
+                "Last Stand": 130
+            }
+        },
+        {
+            "name": "Gaiuchuu Seer",
+            "perks": {
+                "Fresh Focus": 145,
+                "Bulk Up": 145
+            }
+        }
+    ]
+}

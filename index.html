@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Honor Gear Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .sortable:hover {
+      cursor: pointer;
+      background-color: #f8f9fa;
+    }
+    .filter-section {
+      border: 1px solid #dee2e6;
+      border-radius: 0.375rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .filter-section h4 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row mb-4">
+      <!-- Left Column: Form -->
+      <div class="col-md-6">
+        <h3>Add Gear</h3>
+        <form id="gear-form" class="mb-4">
+          <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <select id="type" name="type" class="form-select" required>
+              <option value="helm">Helm</option>
+              <option value="chest">Chest</option>
+              <option value="arms">Arms</option>
+              <option value="weapon1">Weapon 1</option>
+              <option value="weapon2">Weapon 2</option>
+              <option value="weapon3">Weapon 3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="perk1" class="form-label">Perk 1</label>
+            <select id="perk1" name="perk1" class="form-select" required>
+              <option value="" disabled selected>Select a perk</option>
+              <!-- Perk options will be added dynamically -->
+            </select>
+            <input type="number" id="perk1-value" name="perk1-value" class="form-control mt-2" placeholder="Perk 1 Value" required>
+          </div>
+          <div class="mb-3">
+            <label for="perk2" class="form-label">Perk 2</label>
+            <select id="perk2" name="perk2" class="form-select">
+              <option value="" disabled selected>Select a perk</option>
+              <!-- Perk options will be added dynamically -->
+            </select>
+            <input type="number" id="perk2-value" name="perk2-value" class="form-control mt-2" placeholder="Perk 2 Value">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Gear</button>
+        </form>
+      </div>
+
+      <!-- Right Column: Gear Table List -->
+      <div class="col-md-6">
+        <h3>Gear List</h3>
+        <table class="table table-bordered" id="gear-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Perk 1</th>
+              <th>Value 1</th>
+              <th>Perk 2</th>
+              <th>Value 2</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Gear data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Perk Filters -->
+    <div class="filter-section">
+      <h4>Filter Perks</h4>
+      <div id="perk-filters" class="d-flex flex-wrap gap-2">
+        <!-- Perk checkboxes will be added dynamically -->
+      </div>
+    </div>
+
+    <!-- Best Perk Combination Table -->
+    <div>
+      <h3>Best Perk Combinations</h3>
+      <table class="table table-bordered" id="result-table">
+        <thead>
+          <tr>
+            <th class="sortable" data-sort="combination">Combination</th>
+            <th class="sortable" data-sort="activePerks">Active Perks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Best perk combinations will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
