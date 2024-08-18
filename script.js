@@ -172,47 +172,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function populatePerkOptions() {
-    const perkCategories = {
-      Offensive: ['Galestorm', 'Devourer', 'Early Reaper', 'Endurance', 'Survival Instinct', 'Crush Them', 'Head Hunter'],
-      Defensive: ['Aegis', 'Shields Up', 'Bastion', 'Vengeful Barrier', 'Last Stand', 'Fresh Focus', 'Bulk Up'],
-      Assistive: ['Radiant Rebound', 'Remedy', 'Feline Agility', 'Supersonic', 'Clever Tactics', 'Rising Dawn', 'Rapid Refresh']
-    };
-    
+    const perk1Select = document.getElementById('perk1');
+    const perk2Select = document.getElementById('perk2');
     const perkFilters = document.getElementById('perk-filters');
+    
+    perkOptions.forEach((perk, index) => {
+      // Populate perk dropdowns
+      const option1 = document.createElement('option');
+      option1.value = perk;
+      option1.textContent = perk;
+      perk1Select.appendChild(option1.cloneNode(true));
+      
+      const option2 = document.createElement('option');
+      option2.value = perk;
+      option2.textContent = perk;
+      perk2Select.appendChild(option2.cloneNode(true));
 
-    Object.keys(perkCategories).forEach(category => {
-      const sectionDiv = document.createElement('div');
-      sectionDiv.className = 'filter-section';
+      // Create checkboxes for filtering
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.value = perk;
+      checkbox.id = `perk-filter-${index}`;
+      checkbox.className = 'form-check-input';
+      checkbox.addEventListener('change', filterCombinations);
 
-      const header = document.createElement('h4');
-      header.textContent = category;
-      sectionDiv.appendChild(header);
-
-      const categoryDiv = document.createElement('div');
-      categoryDiv.className = 'd-flex flex-wrap gap-2';
-
-      perkCategories[category].forEach((perk, index) => {
-          const checkbox = document.createElement('input');
-          checkbox.type = 'checkbox';
-          checkbox.value = perk;
-          checkbox.id = `perk-filter-${category}-${index}`;
-          checkbox.className = 'form-check-input';
-          checkbox.addEventListener('change', filterCombinations);
-
-          const label = document.createElement('label');
-          label.textContent = perk;
-          label.htmlFor = checkbox.id;
-          label.className = 'form-check-label';
-
-          const div = document.createElement('div');
-          div.className = 'form-check';
-          div.appendChild(checkbox);
-          div.appendChild(label);
-          categoryDiv.appendChild(div);
-      });
-
-      sectionDiv.appendChild(categoryDiv);
-      perkFilters.appendChild(sectionDiv);
+      const label = document.createElement('label');
+      label.textContent = perk;
+      label.htmlFor = checkbox.id;
+      label.className = 'form-check-label';
+      
+      const div = document.createElement('div');
+      div.className = 'form-check';
+      div.appendChild(checkbox);
+      div.appendChild(label);
+      perkFilters.appendChild(div);
     });
 
     // Add "All" filter
@@ -232,7 +225,6 @@ document.addEventListener('DOMContentLoaded', () => {
     allDiv.appendChild(allCheckbox);
     allDiv.appendChild(allLabel);
     perkFilters.appendChild(allDiv);
-    
   }
 
   function filterCombinations() {

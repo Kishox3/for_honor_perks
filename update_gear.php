@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Path to the JSON file
-$jsonFile = 'gear_data_' . $_POST['hero'] . '.json'; // Adjust path to hero-specific JSON file
+$jsonFile = 'gear_data.json';
 
 // Read existing data
 $data = json_decode(file_get_contents($jsonFile), true);
@@ -14,14 +14,6 @@ $type = $request['type'];
 $name = $request['name'];
 
 if ($action === 'add') {
-    // Check gear limit
-    $currentCount = count($data[$type] ?? []);
-    if ($currentCount >= 60) {
-        http_response_code(400);
-        echo json_encode(['error' => 'Gear limit reached']);
-        exit;
-    }
-    
     // Add gear
     $gear = array(
         'name' => $request['name'],
